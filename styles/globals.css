@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Poppins:wght@200;300;400;700;800&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Lien de navigation avec effet de survol */
+  .nav__link {
+    @apply relative text-xl w-fit block px-3 py-1 font-semibold transition-all duration-200 text-white;
+  }
+  .nav__link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    height: 4px;
+    width: 80%;
+    background: linear-gradient(90deg, #6366f1 0%, #06b6d4 100%);
+    border-radius: 2px;
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+  }
+  .nav__link:hover {
+    color: #06b6d4; /* cyan-500 */
+    transform: scale(1.07);
+  }
+  .nav__link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  /* Fond personnalisé avec une image */
+  .custom-bg {
+    background-size: cover;
+    background-position: center;
+    background-image: url('/images/b1.jpg'); /* Correction de la syntaxe */
+    filter: brightness(0.9); /* Légère obscurité pour un meilleur contraste */
+  }
+
+  /* Style pour les sous-titres */
+  .heading__mini {
+    @apply text-[17px] opacity-75 uppercase tracking-widest;
+    color: #00bcd4; /* Couleur cyan pour un effet moderne */
+  }
+
+  /* Style pour les titres principaux */
+  .heading__primary {
+    color: white;
+    @apply mt-[0.6rem] p-2 sm:p-0 leading-[3.5rem] text-[27px] md:text-[30px] lg:text-[38px] xl:text-[45px] font-bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Ajout d'une ombre pour un effet de profondeur */
+  }
+}
+
+/* Effet de service personnalisé */
+.custom__service::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%), 
+              linear-gradient(to top, rgba(0, 8, 255, 0.4) 0%, rgba(70, 14, 255, 0.25) 200%);
+  background-blend-mode: multiply;
+  clip-path: circle(50px at 95% 4%);
+  border-radius: 0.5rem;
+  transition: all 0.8s ease-in-out;
+}
+
+.custom__service:hover::before {
+  clip-path: circle(1000px at 95% 4%);
+  z-index: -1;
+  filter: brightness(1.1); /* Légère augmentation de la luminosité au survol */
+}
+
+/* Ajout d'une animation de fondu */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
