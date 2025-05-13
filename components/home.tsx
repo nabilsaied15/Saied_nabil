@@ -3,19 +3,7 @@ import TypeWriteEffect from "./Helper/TypeWriteEffect";
 import Image from "next/image";
 
 const Home = () => {
-    const handleDownloadCV = () => {
-        try {
-            const link = document.createElement("a");
-            link.href = "/files/cv_nabil_saied_alternance.pdf";
-            link.download = "cv_nabil_saied_alternance.pdf";
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        } catch (error) {
-            console.error("Erreur lors du téléchargement du CV:", error);
-            alert("Une erreur est survenue lors du téléchargement du CV. Veuillez réessayer.");
-        }
-    };
+
 
     const handleHireMe = () => {
         // Redirect to the contact section
@@ -55,17 +43,7 @@ const Home = () => {
                                     </svg>
                                 </span>
                             </button>
-                            <button
-                                onClick={handleDownloadCV}
-                                className="group relative flex h-[50px] w-40 items-center justify-center font-semibold overflow-hidden bg-gray-700 text-white shadow-2xl rounded-lg transition-all duration-300 hover:shadow-gray-700/50 hover:scale-105"
-                            >
-                                <span className="relative z-10 flex items-center">
-                                    Download CV
-                                    <svg className="w-4 h-4 ml-2 transform transition-transform group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                                    </svg>
-                                </span>
-                            </button>
+
                         </div>
                     </div>
                     <div className="hidden md:block">
