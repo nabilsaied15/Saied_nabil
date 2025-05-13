@@ -14,17 +14,17 @@ const contactItems = [
   {
     icon: <EnvelopeIcon className="w-7 h-7 text-purple-500" />,
     title: "Email",
-    value: "jordanturnaco@gmail.com",
+    value: "nabilsaied04@gmail.com",
   },
   {
     icon: <MapPinIcon className="w-7 h-7 text-purple-500" />,
     title: "Localisation",
-    value: "Thorigny-sur-marne, 77400",
+    value: "15 rue de la peupleraie Longjumeau 91160",
   },
   {
     icon: <FaLinkedin className="w-7 h-7 text-purple-500" />,
     title: "LinkedIn",
-    value: "Jordan TURNACO",
+    value: "Saied Nabil ",
   },
 ];
 
