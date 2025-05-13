@@ -38,7 +38,7 @@ const Projects = () => {
       image: "/images/cropped-01_LOGO-WEB-Simple-fond-transp-1.png",
       technologies: ["Flutter FLOW", "Supabase"],
       note: "",
-      date: "Septembre 2024 - Mars 2025",
+      date: "Janvier 2025 -  Février 2025",
       github: "",
       youtube: "",
       featured: true,
