@@ -25,7 +25,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <a href="#home" className="text-2xl font-bold text-white font-poppins tracking-wide">
-              SNANI Nabil
+              SAIED Nabil
             </a>
           </div>
           <div className="hidden md:block">

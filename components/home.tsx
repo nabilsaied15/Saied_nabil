@@ -6,8 +6,8 @@ const Home = () => {
     const handleDownloadCV = () => {
         try {
             const link = document.createElement("a");
-            link.href = "/files/Cv_SAIED_Nabil.pdf";
-            link.download = "Cv_SAIED_Nabil.pdf";
+            link.href = "/files/cv_nabil_saied_alternance.pdf";
+            link.download = "cv_nabil_saied_alternance.pdf";
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);

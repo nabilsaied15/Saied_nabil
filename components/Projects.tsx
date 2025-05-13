@@ -4,6 +4,11 @@ import Image from "next/image";
 import { GithubIcon, YoutubeIcon } from "lucide-react";
 
 const Projects = () => {
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    alert("Pour plus d'informations, veuillez envoyer un message par email. Mon Mail : nabilsaied04@gmail.com ❤❤");
+  };
+
   const projects = [
     {
       title: "Phantom Burger",
@@ -12,19 +17,30 @@ const Projects = () => {
       technologies: ["HTML", "CSS", "JavaScript", "PHP"],
       note: "17/20",
       date: "Novembre 2024",
-      github: "https://github.com/yourusername/phantom-burger",
-      youtube: "https://youtube.com/watch?v=...",
+      github: "",
+      youtube: "",
       featured: false,
     },
     {
-      title: "Développeur d’application – Stage",
-      description: "Développement d’une application Android/iOS pour promouvoir le commerce de proximité .Conception de l’interface utilisateur (UX/UI) avec FlutterFlow : navigation formulaires, affichage dynamique .Intégration de Supabase pour la gestion des données (authentification base PostgreSQL, stockage d’images) .",
+      title: "Projet réalisé dans le cadre d'un workshop",
+      description: "  Vie la vie d'un étudiant en numérique  Développement d'un jeu en 3D  ",
+      image: "/images/Pfsense-Firewall..png",
+      technologies: ["Unity", "C#"],
+      note: "19/20",
+      date: "Premier Prix de l'école ",
+      github: "",
+      youtube: "",
+      featured: false,
+    },
+    {
+      title: "Développeur d'application – Stage",
+      description: "Développement d'une application Android/iOS pour promouvoir le commerce de proximité .Conception de l'interface utilisateur (UX/UI) avec FlutterFlow : navigation formulaires, affichage dynamique .Intégration de Supabase pour la gestion des données (authentification base PostgreSQL, stockage d'images) .",
       image: "/images/cropped-01_LOGO-WEB-Simple-fond-transp-1.png",
-      technologies: ["React-Native", "Firebase"],
-      note: "18/20",
+      technologies: ["Flutter FLOW", "Supabase"],
+      note: "",
       date: "Septembre 2024 - Mars 2025",
-      github: "https://github.com/yourusername/cyberlearn",
-      youtube: "https://youtube.com/watch?v=...",
+      github: "",
+      youtube: "",
       featured: true,
     },
     {
@@ -34,8 +50,8 @@ const Projects = () => {
       technologies: ["HTML", "CSS", "JavaScript", "PHP"],
       note: "20/20",
       date: "Décembre 2023",
-      github: "https://github.com/yourusername/smart-bike",
-      youtube: "https://youtube.com/watch?v=...",
+      github: "",
+      youtube: "",
       featured: false,
     },
     {
@@ -45,10 +61,22 @@ const Projects = () => {
       technologies: ["PFsense", "VMware", "Linux", "Cisco"],
       note: "17/20",
       date: "Décembre 2024",
-      github: "https://github.com/yourusername/server-infra",
-      youtube: "https://youtube.com/watch?v=...",
+      github: "",
+      youtube: "",
       featured: false,
     },
+    {
+      title: "Développeur Web – Stage",
+      description: "Développement d'un site web en HTML, CSS, PHP et JavaScript. Création d'un site web interne pour la gestion de chantiers ferroviaires.",
+      image: "/images/cropped-01_LOGO-WEB-Simple-fond-transp-1.png",
+      technologies: ["HTML", "CSS", "JavaScript", "PHP"],
+      date: "Avril  2024 - Juin 2024",
+      github: "",
+      youtube: "",
+      featured: true,
+    },
+
+
   ];
 
   return (
@@ -121,6 +149,7 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={handleLinkClick}
                     className="flex items-center gap-2 text-gray-300 hover:text-indigo-400 transition-colors duration-300"
                   >
                     <GithubIcon className="w-5 h-5" />
@@ -130,6 +159,7 @@ const Projects = () => {
                     href={project.youtube}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={handleLinkClick}
                     className="flex items-center gap-2 text-gray-300 hover:text-indigo-400 transition-colors duration-300"
                   >
                     <YoutubeIcon className="w-5 h-5" />
