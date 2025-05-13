@@ -33,7 +33,7 @@ const Projects = () => {
       featured: false,
     },
     {
-      title: "Développeur d'application – Stage",
+      title: "Développeur d'application – Stage CityNeed",
       description: "Développement d'une application Android/iOS pour promouvoir le commerce de proximité .Conception de l'interface utilisateur (UX/UI) avec FlutterFlow : navigation formulaires, affichage dynamique .Intégration de Supabase pour la gestion des données (authentification base PostgreSQL, stockage d'images) .",
       image: "/images/cropped-01_LOGO-WEB-Simple-fond-transp-1.png",
       technologies: ["Flutter FLOW", "Supabase"],
@@ -66,7 +66,7 @@ const Projects = () => {
       featured: false,
     },
     {
-      title: "Développeur Web – Stage",
+      title: "Développeur Web – Stage  Eiffage Rail",
       description: "Développement d'un site web en HTML, CSS, PHP et JavaScript. Création d'un site web interne pour la gestion de chantiers ferroviaires.",
       image: "/images/cropped-01_LOGO-WEB-Simple-fond-transp-1.png",
       technologies: ["HTML", "CSS", "JavaScript", "PHP"],
